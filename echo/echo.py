@@ -11,7 +11,7 @@ help_text='''
 这是一个桃按钮，收集了部分某holocn成员的b动静
 [@bot+我爱你]   taffy爱你哟
 [来点塔菲|来点taffy|来点cfm]   随机taffy能量
-[@bot+晚安]     来自cfm的晚安
+[@bot+晚安喵]     来自cfm的晚安
 [想听生日歌]    送上cfm限定生日歌一首
 [爽死了]    爽死了
 [对呀对呀]      对呀对呀
@@ -76,7 +76,7 @@ async def woaini(bot, event):
     await bot.send(event, rec)
 
 
-@sv.on_fullmatch(('晚安', '睡了', '睡觉了', '眠了'), only_to_me=True)
+@sv.on_fullmatch(('晚安喵', '睡了喵', '睡觉了喵', '眠了喵'), only_to_me=True)
 async def sleep(bot, event):
     if random.random() <= 0.3:
         voice = R.get('record/echo/', '晚安.mp3')
